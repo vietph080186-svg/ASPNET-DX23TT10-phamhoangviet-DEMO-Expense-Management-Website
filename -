@@ -1,0 +1,16 @@
+*.suo
+*.user
+*.userosscache
+.vs/
+bin/
+obj/
+packages/
+TestResults/
+*.cache
+*.userprefs
+bin/x64/
+obj/x64/
+bin/x86/
+obj/x86/
+.vs/
+*.cachefile

@@ -11,6 +11,14 @@
 *.sln.docstates
 *.env
 
+# Explicit Visual Studio Web project ignores
+.vs/
+bin/
+obj/
+packages/
+TestResults/
+*.cache
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
