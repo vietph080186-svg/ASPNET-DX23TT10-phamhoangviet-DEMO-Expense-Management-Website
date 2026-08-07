@@ -1,0 +1,51 @@
+﻿@startuml
+entity "Users" as Users {
+  *UserId : int <<PK>>
+  Username : nvarchar(50)
+  PasswordHash : nvarchar(256)
+  FullName : nvarchar(100)
+  Email : nvarchar(100)
+  IsAdmin : bit
+  CreatedAt : datetime2
+  UpdatedAt : datetime2
+}
+
+entity "Categories" as Categories {
+  *CategoryId : int <<PK>>
+  Name : nvarchar(100)
+  CategoryType : nvarchar(20)
+  Description : nvarchar(255)
+  IsActive : bit
+  CreatedByUserId : int <<FK>>
+  CreatedAt : datetime2
+  UpdatedAt : datetime2
+}
+
+entity "Transactions" as Transactions {
+  *TransactionId : int <<PK>>
+  UserId : int <<FK>>
+  CategoryId : int <<FK>>
+  Amount : decimal(18,2)
+  TransactionDate : datetime2
+  Description : nvarchar(255)
+  CreatedAt : datetime2
+  UpdatedAt : datetime2
+}
+
+entity "Budgets" as Budgets {
+  *BudgetId : int <<PK>>
+  UserId : int <<FK>>
+  CategoryId : int <<FK>>
+  Amount : decimal(18,2)
+  StartDate : date
+  EndDate : date
+  CreatedAt : datetime2
+  UpdatedAt : datetime2
+}
+
+Users ||--o{ Categories : creates
+Users ||--o{ Transactions : records
+Categories ||--o{ Transactions : categorizes
+Users ||--o{ Budgets : owns
+Categories ||--o{ Budgets : applies_to
+@enduml
