@@ -1,0 +1,36 @@
+﻿@startuml
+left to right direction
+actor Administrator as Admin
+actor User
+
+User --> (Đăng nhập)
+User --> (Đăng xuất)
+User --> (Đổi mật khẩu)
+User --> (Quản lý danh mục thu)
+User --> (Quản lý danh mục chi)
+User --> (Thêm giao dịch)
+User --> (Sửa giao dịch)
+User --> (Xóa giao dịch)
+User --> (Xem lịch sử giao dịch)
+User --> (Thiết lập ngân sách)
+User --> (Cập nhật ngân sách)
+User --> (Xem báo cáo)
+User --> (Xem thống kê)
+User --> (Xuất XML)
+
+Admin --> (Đăng nhập)
+Admin --> (Đăng xuất)
+Admin --> (Đổi mật khẩu)
+Admin --> (Quản lý người dùng)
+Admin --> (Quản lý danh mục thu)
+Admin --> (Quản lý danh mục chi)
+Admin --> (Thêm giao dịch)
+Admin --> (Sửa giao dịch)
+Admin --> (Xóa giao dịch)
+Admin --> (Xem lịch sử giao dịch)
+Admin --> (Thiết lập ngân sách)
+Admin --> (Cập nhật ngân sách)
+Admin --> (Xem báo cáo)
+Admin --> (Xem thống kê)
+Admin --> (Xuất XML)
+@enduml
