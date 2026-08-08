@@ -21,7 +21,7 @@ namespace ExpenseManagement.Web.DAL
         {
             if (string.IsNullOrWhiteSpace(username)) throw new ArgumentException("username");
 
-            const string sql = @
+            const string sql =
                 "SELECT UserId, Username, PasswordHash, FullName, Email, IsAdmin, CreatedAt, UpdatedAt "
                 + "FROM Users WHERE Username = @Username";
 
@@ -40,7 +40,7 @@ namespace ExpenseManagement.Web.DAL
         /// </summary>
         public static User GetUserById(int userId)
         {
-            const string sql = @
+            const string sql =
                 "SELECT UserId, Username, PasswordHash, FullName, Email, IsAdmin, CreatedAt, UpdatedAt "
                 + "FROM Users WHERE UserId = @UserId";
 
@@ -56,7 +56,7 @@ namespace ExpenseManagement.Web.DAL
         /// </summary>
         public static List<User> GetUsers()
         {
-            const string sql = @
+            const string sql =
                 "SELECT UserId, Username, PasswordHash, FullName, Email, IsAdmin, CreatedAt, UpdatedAt FROM Users";
 
             var dt = DatabaseHelper.ExecuteDataTable(sql, CommandType.Text);
