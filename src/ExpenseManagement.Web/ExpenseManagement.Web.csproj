@@ -65,6 +65,7 @@
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="DAL\CategoryDAL.cs" />
+    <Compile Include="BLL\CategoryBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
