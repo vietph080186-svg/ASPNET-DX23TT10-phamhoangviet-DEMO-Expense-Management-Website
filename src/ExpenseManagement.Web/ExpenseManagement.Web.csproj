@@ -72,6 +72,8 @@
     <Compile Include="BLL\BudgetBLL.cs" />
     <Compile Include="Models\Budget.cs" />
     <Compile Include="DAL\BudgetDAL.cs" />
+    <Compile Include="Dashboard.aspx.cs" />
+    <Compile Include="Dashboard.aspx.designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
